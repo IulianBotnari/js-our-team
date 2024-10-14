@@ -56,7 +56,7 @@ for (let i = 0; i < team.length; i++) {
     console.log(teamEl);
 
     let markup = `
-        <div class="col-4 d-flex g-4">
+        <div class="col-12 col-md-6 col-lg-4 d-flex g-4">
             <div class="img_container"><img src="${teamEl.image}" alt="Marco">
             </div>
             <div class="info p-2">

@@ -49,7 +49,7 @@ let team = [
     },
 ]
 
-let employer = document.querySelector(".row")
+let employer = document.querySelector(".card_emp")
 
 for (let i = 0; i < team.length; i++) {
     let teamEl = team[i];
@@ -62,7 +62,7 @@ for (let i = 0; i < team.length; i++) {
             <div class="info p-2">
                 <h5>${teamEl.name}</h5>
                 <p>${teamEl.job}</p>
-                <a href="www.google.com">${teamEl.email}</a
+                <a href="www.google.com">${teamEl.email}</a>
             </div>
         </div>    
         `
@@ -71,7 +71,29 @@ for (let i = 0; i < team.length; i++) {
 
 
 }
+let addForm = document.querySelector("form")
 
 
+addForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let img = document.getElementById("img").value;
+    let name = document.getElementById("name").value;
+    let job = document.getElementById("job").value;
+    let email = document.getElementById("email").value;
+
+    let addMarkup = `
+        <div class="col-12 col-md-6 col-lg-4 d-flex g-4">
+            <div class="img_container"><img src="${img}" alt="Marco">
+            </div>
+            <div class="info p-2">
+                <h5>${name}</h5>
+                <p>${job}</p>
+                <a href="www.google.com">${email}</a>
+            </div>
+        </div>  `
+    
+        employer.insertAdjacentHTML("beforeend", addMarkup )
+
+})
 
 

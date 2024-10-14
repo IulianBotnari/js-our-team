@@ -49,21 +49,25 @@ let team = [
     },
 ]
 
-
+let employer = document.querySelector(".row")
 
 for (let i = 0; i < team.length; i++) {
     let teamEl = team[i];
     console.log(teamEl);
 
     let markup = `
-            <div class="img_container"><img src="${teamEL.image}" alt="Marco">
+        <div class="col-4 d-flex g-4">
+            <div class="img_container"><img src="${teamEl.image}" alt="Marco">
             </div>
             <div class="info p-2">
-                <h5>${teamEL.name}</h5>
-                <p>${teamEL.job}</p>
-                <a href="www.google.com">${teamEL.email}</a>
+                <h5>${teamEl.name}</h5>
+                <p>${teamEl.job}</p>
+                <a href="www.google.com">${teamEl.email}</a
             </div>
-    `
+        </div>    
+        `
+
+        employer.insertAdjacentHTML("beforeend", markup)
 
 
 }
